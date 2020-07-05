@@ -15,8 +15,8 @@ const calculateCashflows = (data) => {
     u = 'b';
   }
   data = _.sortBy(data.filter(d => d.reportDate), (d) => {
-    return -d.reportDate;
-  }).reverse();
+    return d.reportDate;
+  }).slice(-4);
 
   return data.map((d, i) => {
     const qq = ~~d.reportDate.slice(5, 7);

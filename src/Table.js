@@ -23,17 +23,17 @@ export class Table extends React.Component {
         <tbody>
           <tr>
             <td className='bold'>Total Cashflows</td>
-            <td className='bg-lightgray-ultra-5'>{data[3] && data[3].cashFlow && parseFloat(data[3].cashFlow).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-4'>{data[2] && data[1].cashFlow && parseFloat(data[2].cashFlow).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-3'>{data[1] && data[2].cashFlow && parseFloat(data[1].cashFlow).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-2'>{data[0] && data[3].cashFlow && parseFloat(data[0].cashFlow).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-5'>{data[0] && data[0].cashFlow && parseFloat(data[0].cashFlow).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-4'>{data[1] && data[1].cashFlow && parseFloat(data[1].cashFlow).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-3'>{data[2] && data[2].cashFlow && parseFloat(data[2].cashFlow).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-2'>{data[3] && data[3].cashFlow && parseFloat(data[3].cashFlow).toFixed(2)}</td>
           </tr>
           <tr>
             <td className='bold'>Financing Cashflows</td>
-            <td className='bg-lightgray-ultra-5'>{data[3] && data[3].cashFlowFinancing && parseFloat(data[3].cashFlowFinancing).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-4'>{data[2] && data[1].cashFlowFinancing && parseFloat(data[2].cashFlowFinancing).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-3'>{data[1] && data[2].cashFlowFinancing && parseFloat(data[1].cashFlowFinancing).toFixed(2)}</td>
-            <td className='bg-lightgray-ultra-2'>{data[0] && data[3].cashFlowFinancing && parseFloat(data[0].cashFlowFinancing).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-5'>{data[0] && data[0].cashFlowFinancing && parseFloat(data[0].cashFlowFinancing).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-4'>{data[1] && data[1].cashFlowFinancing && parseFloat(data[1].cashFlowFinancing).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-3'>{data[2] && data[2].cashFlowFinancing && parseFloat(data[2].cashFlowFinancing).toFixed(2)}</td>
+            <td className='bg-lightgray-ultra-2'>{data[3] && data[3].cashFlowFinancing && parseFloat(data[3].cashFlowFinancing).toFixed(2)}</td>
           </tr>
           <tr>
             <td className='bold'>Investing Cashflows</td>
