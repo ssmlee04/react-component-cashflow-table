@@ -147,12 +147,12 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         }, btnText)));
       }
 
-      var data = calculateCashflows(_lodash["default"].get(profile, 'cashflow_stmt.data', []));
+      var data = calculateCashflows(_lodash["default"].get(profile, 'cashflow_stmt.data', [])).slice(-4);
       return /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           width: '100%',
           padding: 5,
-          fontSize: 14
+          fontSize: 12
         }
       }, /*#__PURE__*/_react["default"].createElement("div", {
         style: {

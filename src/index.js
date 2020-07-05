@@ -86,9 +86,9 @@ export class CashflowTable extends React.Component {
       );
     }
 
-    const data = calculateCashflows(_.get(profile, 'cashflow_stmt.data', []));
+    const data = calculateCashflows(_.get(profile, 'cashflow_stmt.data', [])).slice(-4);
     return (
-      <div style={{ width: '100%', padding: 5, fontSize: 14 }}>
+      <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
         <div style={{ color: 'darkred', fontWeight: 'bold' }}>{profile.ticker} - {profile.name}</div>
         <Table data={data} />
       </div>
