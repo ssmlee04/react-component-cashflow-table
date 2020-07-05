@@ -42,13 +42,13 @@ export class Table extends React.Component {
             <td className='bg-lightgray-ultra-3'>{data[2] && data[2].totalInvestingCashFlows && parseFloat(data[2].totalInvestingCashFlows).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-2'>{data[3] && data[3].totalInvestingCashFlows && parseFloat(data[3].totalInvestingCashFlows).toFixed(2)}</td>
           </tr>
-          <tr>
+          {/*<tr>
             <td className='bold'>Operating Cashflows</td>
             <td className='bg-lightgray-ultra-5'>{data[0] && data[0].totalInvestingCashFlows && data[0].cashFlow && data[0].cashFlowFinancing && parseFloat(data[0].cashFlow - data[0].totalInvestingCashFlows - data[0].cashFlowFinancing).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-5'>{data[1] && data[1].totalInvestingCashFlows && data[1].cashFlow && data[1].cashFlowFinancing && parseFloat(data[1].cashFlow - data[1].totalInvestingCashFlows - data[1].cashFlowFinancing).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-5'>{data[2] && data[2].totalInvestingCashFlows && data[2].cashFlow && data[2].cashFlowFinancing && parseFloat(data[2].cashFlow - data[2].totalInvestingCashFlows - data[2].cashFlowFinancing).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-5'>{data[3] && data[3].totalInvestingCashFlows && data[3].cashFlow && data[3].cashFlowFinancing && parseFloat(data[3].cashFlow - data[3].totalInvestingCashFlows - data[3].cashFlowFinancing).toFixed(2)}</td>
-          </tr>
+          </tr>*/}
           <tr>
             <td className='bold'>Total Investments</td>
             <td className='bg-lightgray-ultra-5'>{data[0] && data[0].investments && parseFloat(data[0].investments).toFixed(2)}</td>

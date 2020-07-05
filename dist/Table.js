@@ -102,16 +102,6 @@ var Table = /*#__PURE__*/function (_React$Component) {
         className: "bg-lightgray-ultra-2"
       }, data[3] && data[3].totalInvestingCashFlows && parseFloat(data[3].totalInvestingCashFlows).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
-      }, "Operating Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, data[0] && data[0].totalInvestingCashFlows && data[0].cashFlow && data[0].cashFlowFinancing && parseFloat(data[0].cashFlow - data[0].totalInvestingCashFlows - data[0].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, data[1] && data[1].totalInvestingCashFlows && data[1].cashFlow && data[1].cashFlowFinancing && parseFloat(data[1].cashFlow - data[1].totalInvestingCashFlows - data[1].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, data[2] && data[2].totalInvestingCashFlows && data[2].cashFlow && data[2].cashFlowFinancing && parseFloat(data[2].cashFlow - data[2].totalInvestingCashFlows - data[2].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, data[3] && data[3].totalInvestingCashFlows && data[3].cashFlow && data[3].cashFlowFinancing && parseFloat(data[3].cashFlow - data[3].totalInvestingCashFlows - data[3].cashFlowFinancing).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bold"
       }, "Total Investments"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, data[0] && data[0].investments && parseFloat(data[0].investments).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
