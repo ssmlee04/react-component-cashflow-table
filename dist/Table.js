@@ -74,23 +74,23 @@ var Table = /*#__PURE__*/function (_React$Component) {
         className: "bold"
       }, "Total Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, data[3] && data[3].cashFlow && parseFloat(data[3].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[0] && data[0].cashFlow && parseFloat(data[0].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, data[2] && data[1].cashFlow && parseFloat(data[2].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[1] && data[1].cashFlow && parseFloat(data[1].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, data[1] && data[2].cashFlow && parseFloat(data[1].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[2] && data[2].cashFlow && parseFloat(data[2].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, data[0] && data[3].cashFlow && parseFloat(data[0].cashFlow).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[3] && data[3].cashFlow && parseFloat(data[3].cashFlow).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Financing Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, data[3] && data[3].cashFlowFinancing && parseFloat(data[3].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[0] && data[0].cashFlowFinancing && parseFloat(data[0].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, data[2] && data[1].cashFlowFinancing && parseFloat(data[2].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[1] && data[1].cashFlowFinancing && parseFloat(data[1].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, data[1] && data[2].cashFlowFinancing && parseFloat(data[1].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[2] && data[2].cashFlowFinancing && parseFloat(data[2].cashFlowFinancing).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, data[0] && data[3].cashFlowFinancing && parseFloat(data[0].cashFlowFinancing).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[3] && data[3].cashFlowFinancing && parseFloat(data[3].cashFlowFinancing).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Investing Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"

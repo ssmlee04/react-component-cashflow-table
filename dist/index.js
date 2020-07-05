@@ -54,8 +54,8 @@ var calculateCashflows = function calculateCashflows(data) {
   data = _lodash["default"].sortBy(data.filter(function (d) {
     return d.reportDate;
   }), function (d) {
-    return -d.reportDate;
-  }).reverse();
+    return d.reportDate;
+  }).slice(-4);
   return data.map(function (d, i) {
     var qq = ~~d.reportDate.slice(5, 7);
     var yy = d.reportDate.slice(0, 4);
