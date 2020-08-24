@@ -76,7 +76,7 @@ export class CashflowTable extends React.Component {
       const btnText = copied ? 'Copied' : 'Copy Img';
       return (
         <div className='react-components-show-button'>
-          <img alt={`${profile.ticker} - ${profile.name} revenue and income margins`} src={profile.cashflow_table.url} style={{ width: '100%' }} />
+          <img alt={`${profile.ticker} - ${profile.name} cashflow statements`} src={profile.cashflow_table.url} style={{ width: '100%' }} />
           <CopyToClipboard text={profile.cashflow_table.url || ''}
             onCopy={() => this.setState({ copied: true })}
           >

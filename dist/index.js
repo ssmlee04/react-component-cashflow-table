@@ -129,7 +129,7 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         return /*#__PURE__*/_react["default"].createElement("div", {
           className: "react-components-show-button"
         }, /*#__PURE__*/_react["default"].createElement("img", {
-          alt: "".concat(profile.ticker, " - ").concat(profile.name, " revenue and income margins"),
+          alt: "".concat(profile.ticker, " - ").concat(profile.name, " cashflow statements"),
           src: profile.cashflow_table.url,
           style: {
             width: '100%'
