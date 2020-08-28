@@ -165,14 +165,14 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         style: {
           color: 'darkred',
           fontWeight: 'bold',
-          marginBottom: 2,
+          marginBottom: 4,
           fontSize: 14
         }
       }, profile.ticker, " - ", profile.name, " ", /*#__PURE__*/_react["default"].createElement("span", {
         style: {
           color: 'green'
         }
-      }, "Cashflow stmt")), /*#__PURE__*/_react["default"].createElement(_Table["default"], {
+      }, "Cashflow Statement")), /*#__PURE__*/_react["default"].createElement(_Table["default"], {
         data: data
       }));
     }

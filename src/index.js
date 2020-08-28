@@ -91,7 +91,7 @@ export class CashflowTable extends React.Component {
     const data = calculateCashflows(_.get(profile, `${prop}.data`, [])).slice(-4);
     return (
       <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
-        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 2, fontSize: 14 }}>{profile.ticker} - {profile.name} <span style={{ color: 'green' }}>Cashflow stmt</span></div>
+        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 4, fontSize: 14 }}>{profile.ticker} - {profile.name} <span style={{ color: 'green' }}>Cashflow Statement</span></div>
         <Table data={data} />
       </div>
     );
