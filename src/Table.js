@@ -65,9 +65,9 @@ export class Table extends React.Component {
           <tr>
             <td className='bold'>Changes In Cash</td>
             <td className={`bg-lightgray-ultra-5 ${color(data[0] && data[0].changeInCash)}`}>{data[0] && data[0].changeInCash && parseFloat(data[0].changeInCash).toFixed(2)}</td>
-            <td className={`bg-lightgray-ultra-4 ${color(data[0] && data[0].changeInCash)}`}>{data[1] && data[1].changeInCash && parseFloat(data[1].changeInCash).toFixed(2)}</td>
-            <td className={`bg-lightgray-ultra-3 ${color(data[0] && data[0].changeInCash)}`}>{data[2] && data[2].changeInCash && parseFloat(data[2].changeInCash).toFixed(2)}</td>
-            <td className={`bg-lightgray-ultra-2 ${color(data[0] && data[0].changeInCash)}`}>{data[3] && data[3].changeInCash && parseFloat(data[3].changeInCash).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-4 ${color(data[1] && data[1].changeInCash)}`}>{data[1] && data[1].changeInCash && parseFloat(data[1].changeInCash).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-3 ${color(data[2] && data[2].changeInCash)}`}>{data[2] && data[2].changeInCash && parseFloat(data[2].changeInCash).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-2 ${color(data[3] && data[3].changeInCash)}`}>{data[3] && data[3].changeInCash && parseFloat(data[3].changeInCash).toFixed(2)}</td>
           </tr>
         </tbody>
       </table>

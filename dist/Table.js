@@ -134,11 +134,11 @@ var Table = /*#__PURE__*/function (_React$Component) {
       }, "Changes In Cash"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5 ".concat(color(data[0] && data[0].changeInCash))
       }, data[0] && data[0].changeInCash && parseFloat(data[0].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-4 ".concat(color(data[0] && data[0].changeInCash))
+        className: "bg-lightgray-ultra-4 ".concat(color(data[1] && data[1].changeInCash))
       }, data[1] && data[1].changeInCash && parseFloat(data[1].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-3 ".concat(color(data[0] && data[0].changeInCash))
+        className: "bg-lightgray-ultra-3 ".concat(color(data[2] && data[2].changeInCash))
       }, data[2] && data[2].changeInCash && parseFloat(data[2].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-2 ".concat(color(data[0] && data[0].changeInCash))
+        className: "bg-lightgray-ultra-2 ".concat(color(data[3] && data[3].changeInCash))
       }, data[3] && data[3].changeInCash && parseFloat(data[3].changeInCash).toFixed(2)))));
     }
   }]);
