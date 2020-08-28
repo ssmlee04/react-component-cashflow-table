@@ -64,20 +64,20 @@ export class CashflowTable extends React.Component {
   }
 
   render() {
-    const { profile } = this.props;
+    const { profile, prop = 'cashflow_stmt', imgProp = 'cashflow_table' } = this.props;
     const { copied } = this.state;
     if (!profile) {
       return (
         <div style={{ fontSize: 14 }}>Not available at this time... </div>
       );
     }
-    if (profile.cashflow_table && profile.cashflow_table.url) {
+    if (profile[imgProp] && profile[imgProp].url) {
       const btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-10' : 'react-components-show-url btn btn-sm btn-warning font-10';
       const btnText = copied ? 'Copied' : 'Copy Img';
       return (
         <div className='react-components-show-button'>
-          <img alt={`${profile.ticker} - ${profile.name} cashflow statements`} src={profile.cashflow_table.url} style={{ width: '100%' }} />
-          <CopyToClipboard text={profile.cashflow_table.url || ''}
+          <img alt={`${profile.ticker} - ${profile.name} cashflow statements`} src={profile[imgProp].url} style={{ width: '100%' }} />
+          <CopyToClipboard text={profile[imgProp].url || ''}
             onCopy={() => this.setState({ copied: true })}
           >
             <button className={btnClass} value={btnText}>{btnText}</button>
@@ -86,10 +86,10 @@ export class CashflowTable extends React.Component {
       );
     }
 
-    const data = calculateCashflows(_.get(profile, 'cashflow_stmt.data', [])).slice(-4);
+    const data = calculateCashflows(_.get(profile, `${prop}.data`, [])).slice(-4);
     return (
       <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
-        <div style={{ color: 'darkred', fontWeight: 'bold' }}>{profile.ticker} - {profile.name} <span style={{ color: 'green' }}>Cashflow stmt</span></div>
+        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 2, fontSize: 14 }}>{profile.ticker} - {profile.name} <span style={{ color: 'green' }}>Cashflow stmt</span></div>
         <Table data={data} />
       </div>
     );
