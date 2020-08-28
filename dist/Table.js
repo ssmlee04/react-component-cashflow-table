@@ -33,6 +33,12 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+var color = function color(num) {
+  if (num > 0) return 'green bold';
+  if (num < 0) return 'red bold';
+  return;
+};
+
 var Table = /*#__PURE__*/function (_React$Component) {
   _inherits(Table, _React$Component);
 
@@ -57,7 +63,10 @@ var Table = /*#__PURE__*/function (_React$Component) {
 
       var unit = _lodash["default"].get(data, '0.unit') || 'million';
       return /*#__PURE__*/_react["default"].createElement("table", {
-        className: "table table-sm"
+        className: "table table-sm",
+        style: {
+          marginBottom: 0
+        }
       }, /*#__PURE__*/_react["default"].createElement("thead", {
         className: "bold"
       }, /*#__PURE__*/_react["default"].createElement("th", {
@@ -72,15 +81,15 @@ var Table = /*#__PURE__*/function (_React$Component) {
         className: "bg-lightgray-ultra-2"
       }, data[3] && data[3].quarterStr)), /*#__PURE__*/_react["default"].createElement("tbody", null, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
-      }, "Total Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
+      }, "Operating Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, data[0] && data[0].cashFlow && parseFloat(data[0].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[0] && data[0].cashFlowOperating && parseFloat(data[0].cashFlowOperating).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, data[1] && data[1].cashFlow && parseFloat(data[1].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[1] && data[1].cashFlowOperating && parseFloat(data[1].cashFlowOperating).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, data[2] && data[2].cashFlow && parseFloat(data[2].cashFlow).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[2] && data[2].cashFlowOperating && parseFloat(data[2].cashFlowOperating).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, data[3] && data[3].cashFlow && parseFloat(data[3].cashFlow).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+      }, data[3] && data[3].cashFlowOperating && parseFloat(data[3].cashFlowOperating).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Financing Cashflows"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
@@ -120,7 +129,17 @@ var Table = /*#__PURE__*/function (_React$Component) {
         className: "bg-lightgray-ultra-3"
       }, data[2] && data[2].capitalExpenditures && parseFloat(data[2].capitalExpenditures).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, data[3] && data[3].capitalExpenditures && parseFloat(data[3].capitalExpenditures).toFixed(2)))));
+      }, data[3] && data[3].capitalExpenditures && parseFloat(data[3].capitalExpenditures).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Changes In Cash"), /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-5 ".concat(color(data[0] && data[0].changeInCash))
+      }, data[0] && data[0].changeInCash && parseFloat(data[0].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-4 ".concat(color(data[0] && data[0].changeInCash))
+      }, data[1] && data[1].changeInCash && parseFloat(data[1].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-3 ".concat(color(data[0] && data[0].changeInCash))
+      }, data[2] && data[2].changeInCash && parseFloat(data[2].changeInCash).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-2 ".concat(color(data[0] && data[0].changeInCash))
+      }, data[3] && data[3].changeInCash && parseFloat(data[3].changeInCash).toFixed(2)))));
     }
   }]);
 
