@@ -121,7 +121,7 @@ var Table = /*#__PURE__*/function (_React$Component) {
         className: "bg-lightgray-ultra-2"
       }, data[3] && data[3].investments && parseFloat(data[3].investments).toFixed(2))), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
-      }, "Total Capital Expendistures"), /*#__PURE__*/_react["default"].createElement("td", {
+      }, "Total Capital Expenditures"), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, data[0] && data[0].capitalExpenditures && parseFloat(data[0].capitalExpenditures).toFixed(2)), /*#__PURE__*/_react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"

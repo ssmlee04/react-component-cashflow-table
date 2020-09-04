@@ -56,7 +56,7 @@ export class Table extends React.Component {
             <td className='bg-lightgray-ultra-2'>{data[3] && data[3].investments && parseFloat(data[3].investments).toFixed(2)}</td>
           </tr>
           <tr>
-            <td className='bold'>Total Capital Expendistures</td>
+            <td className='bold'>Total Capital Expenditures</td>
             <td className='bg-lightgray-ultra-5'>{data[0] && data[0].capitalExpenditures && parseFloat(data[0].capitalExpenditures).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-4'>{data[1] && data[1].capitalExpenditures && parseFloat(data[1].capitalExpenditures).toFixed(2)}</td>
             <td className='bg-lightgray-ultra-3'>{data[2] && data[2].capitalExpenditures && parseFloat(data[2].capitalExpenditures).toFixed(2)}</td>
