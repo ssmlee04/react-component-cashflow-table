@@ -69,6 +69,13 @@ export class Table extends React.Component {
             <td className={`bg-lightgray-ultra-3 ${color(data[2] && data[2].changeInCash)}`}>{data[2] && data[2].changeInCash && parseFloat(data[2].changeInCash).toFixed(2)}</td>
             <td className={`bg-lightgray-ultra-2 ${color(data[3] && data[3].changeInCash)}`}>{data[3] && data[3].changeInCash && parseFloat(data[3].changeInCash).toFixed(2)}</td>
           </tr>
+          <tr>
+            <td className='bold'>Free Cash flow</td>
+            <td className={`bg-lightgray-ultra-5 ${color(data[0] && data[0].freeCashFlow)}`}>{data[0] && data[0].freeCashFlow && parseFloat(data[0].freeCashFlow).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-4 ${color(data[1] && data[1].freeCashFlow)}`}>{data[1] && data[1].freeCashFlow && parseFloat(data[1].freeCashFlow).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-3 ${color(data[2] && data[2].freeCashFlow)}`}>{data[2] && data[2].freeCashFlow && parseFloat(data[2].freeCashFlow).toFixed(2)}</td>
+            <td className={`bg-lightgray-ultra-2 ${color(data[3] && data[3].freeCashFlow)}`}>{data[3] && data[3].freeCashFlow && parseFloat(data[3].freeCashFlow).toFixed(2)}</td>
+          </tr>
         </tbody>
       </table>
     );

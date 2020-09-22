@@ -81,6 +81,7 @@ var calculateCashflows = function calculateCashflows(data) {
     d.investments = d.iv / divider;
     d.capitalExpenditures = d.ce / divider;
     d.changeInCash = d.cic / divider;
+    d.freeCashFlow = d.fcf / divider;
     return d;
   });
 };
