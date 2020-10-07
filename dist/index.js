@@ -184,7 +184,12 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         style: {
           color: 'darkred'
         }
-      }, "@earningsfly"), " with \u2764\uFE0F"));
+      }, "@earningsfly"), " with ", /*#__PURE__*/_react["default"].createElement("span", {
+        style: {
+          fontSize: 16,
+          color: 'red'
+        }
+      }, "\u2764\uFE0F")));
     }
   }]);
 
