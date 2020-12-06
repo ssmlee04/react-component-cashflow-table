@@ -12,7 +12,7 @@ export class Table extends React.Component {
     const { data } = this.props;
     if (!data || !data.length) {
       return (
-        <div className='font-12'>Not available at this time... </div>
+        <div className='font-8'>Not available at this time... </div>
       );
     }
     const unit = _.get(data, '0.unit') || 'million';

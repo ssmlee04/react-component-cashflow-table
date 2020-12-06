@@ -57,7 +57,7 @@ var Table = /*#__PURE__*/function (_React$Component) {
 
       if (!data || !data.length) {
         return /*#__PURE__*/_react["default"].createElement("div", {
-          className: "font-12"
+          className: "font-8"
         }, "Not available at this time... ");
       }
 
