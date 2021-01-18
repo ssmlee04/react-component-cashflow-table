@@ -18,7 +18,7 @@ export class Table extends React.Component {
     const unit = _.get(data, '0.unit') || 'million';
 
     return (
-      <table className='table table-sm' style={{ marginBottom: 0 }}>
+      <table className='table table-sm' style={{ marginBottom: 0, fontSize: 7 }}>
         <thead className='bold'>
           <th className='left lighter'>Unit: ({unit})</th>
           <th className='bg-lightgray-ultra-5'>{data[0] && data[0].quarterStr}</th>

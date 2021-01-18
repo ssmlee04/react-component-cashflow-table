@@ -65,7 +65,8 @@ var Table = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/_react["default"].createElement("table", {
         className: "table table-sm",
         style: {
-          marginBottom: 0
+          marginBottom: 0,
+          fontSize: 7
         }
       }, /*#__PURE__*/_react["default"].createElement("thead", {
         className: "bold"
