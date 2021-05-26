@@ -39,6 +39,12 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+var greenOrRed = function greenOrRed(str, high, low) {
+  var v = parseFloat(str);
+  if (v > high) return 'green bold';
+  if (v < low) return 'red bold';
+};
+
 var calculateCashflows = function calculateCashflows(data) {
   var divider = 1000000;
   var unit = 'million';
@@ -158,6 +164,15 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
       }
 
       var data = calculateCashflows(_lodash["default"].get(profile, "".concat(prop, ".data"), []));
+      var arr = data.slice(count * -1);
+
+      if (!arr || !arr.length) {
+        return /*#__PURE__*/_react["default"].createElement("div", {
+          className: "font-12"
+        }, "Not available at this time... ");
+      }
+
+      var unit = _lodash["default"].get(data, '0.unit') || 'million';
       return /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           width: '100%',
@@ -175,10 +190,64 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         style: {
           color: 'green'
         }
-      }, "Cashflow Statement")), /*#__PURE__*/_react["default"].createElement(_Table["default"], {
-        data: data,
-        count: count
-      }), /*#__PURE__*/_react["default"].createElement("div", {
+      }, "Cashflow Statement")), /*#__PURE__*/_react["default"].createElement("table", {
+        className: "table table-sm",
+        style: {
+          marginBottom: 0,
+          fontSize: 10
+        }
+      }, /*#__PURE__*/_react["default"].createElement("thead", {
+        className: "bold"
+      }, /*#__PURE__*/_react["default"].createElement("th", {
+        className: "left lighter"
+      }, "Unit: (", unit, ")"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d)
+        }, arr[d] && arr[d].quarterStr);
+      })), /*#__PURE__*/_react["default"].createElement("tbody", null, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Operating Cashflows"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(arr[d] && arr[d].cashFlowOperating, 0, 0))
+        }, arr[d] && arr[d].cashFlowOperating && parseFloat(arr[d].cashFlowOperating).toFixed(2));
+      })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Financing Cashflows"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+        }, arr[d] && arr[d].cashFlowFinancing && parseFloat(arr[d].cashFlowFinancing).toFixed(2));
+      })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Investing Cashflows"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+        }, arr[d] && arr[d].totalInvestingCashFlows && parseFloat(arr[d].totalInvestingCashFlows).toFixed(2));
+      })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Total Capital Expenditures"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+        }, arr[d] && arr[d].capitalExpenditures && parseFloat(arr[d].capitalExpenditures).toFixed(2));
+      })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Changes In Cash"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(arr[d] && arr[d].changeInCash, 0, 0))
+        }, arr[d] && arr[d].changeInCash && parseFloat(arr[d].changeInCash).toFixed(2));
+      })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+        className: "bold"
+      }, "Free Cash flow"), _lodash["default"].range(count).map(function (d) {
+        return /*#__PURE__*/_react["default"].createElement("td", {
+          key: d,
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(arr[d] && arr[d].freeCashFlow, 0, 0))
+        }, arr[d] && arr[d].freeCashFlow && parseFloat(arr[d].freeCashFlow).toFixed(2));
+      })))), /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           fontSize: 12,
           color: 'gray'
