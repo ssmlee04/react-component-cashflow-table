@@ -51,7 +51,7 @@ var calculateCashflows = function calculateCashflows(data) {
   var u = 'm';
   if (!data || !data.length) return data;
 
-  if (data[0].cf > 1000000000) {
+  if (data[data.length - 1].ocf > 1000000000) {
     divider = 1000000000;
     unit = 'billion';
     u = 'b';
