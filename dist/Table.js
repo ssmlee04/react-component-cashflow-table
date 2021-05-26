@@ -85,7 +85,7 @@ var Table = /*#__PURE__*/function (_React$Component) {
       }, "Operating Cashflows"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter ").concat(greenOrRed(data[d] && data[d].cashFlowOperating, 0, -999999999999999))
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(data[d] && data[d].cashFlowOperating, 0, 0))
         }, data[d] && data[d].cashFlowOperating && parseFloat(data[d].cashFlowOperating).toFixed(2));
       })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
@@ -113,14 +113,14 @@ var Table = /*#__PURE__*/function (_React$Component) {
       }, "Changes In Cash"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter ").concat(greenOrRed(data[d] && data[d].changeInCash, 0, -999999999999999))
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(data[d] && data[d].changeInCash, 0, 0))
         }, data[d] && data[d].changeInCash && parseFloat(data[d].changeInCash).toFixed(2));
       })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Free Cash flow"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter ").concat(greenOrRed(data[d] && data[d].freeCashFlow, 0, -999999999999999))
+          className: "bg-lightgray-ul-".concat(d, " hov ").concat(greenOrRed(data[d] && data[d].freeCashFlow, 0, 0))
         }, data[d] && data[d].freeCashFlow && parseFloat(data[d].freeCashFlow).toFixed(2));
       }))));
     }

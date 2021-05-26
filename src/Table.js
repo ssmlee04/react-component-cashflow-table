@@ -26,7 +26,7 @@ export class Table extends React.Component {
         <tbody>
           <tr>
             <td className='bold'>Operating Cashflows</td>
-            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter ${greenOrRed(data[d] && data[d].cashFlowOperating, 0, -999999999999999)}`}>{data[d] && data[d].cashFlowOperating && parseFloat(data[d].cashFlowOperating).toFixed(2)}</td>)}
+            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov ${greenOrRed(data[d] && data[d].cashFlowOperating, 0, 0)}`}>{data[d] && data[d].cashFlowOperating && parseFloat(data[d].cashFlowOperating).toFixed(2)}</td>)}
           </tr>
           <tr>
             <td className='bold'>Financing Cashflows</td>
@@ -42,11 +42,11 @@ export class Table extends React.Component {
           </tr>
           <tr>
             <td className='bold'>Changes In Cash</td>
-            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter ${greenOrRed(data[d] && data[d].changeInCash, 0, -999999999999999)}`}>{data[d] && data[d].changeInCash && parseFloat(data[d].changeInCash).toFixed(2)}</td>)}
+            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov ${greenOrRed(data[d] && data[d].changeInCash, 0, 0)}`}>{data[d] && data[d].changeInCash && parseFloat(data[d].changeInCash).toFixed(2)}</td>)}
           </tr>
           <tr>
             <td className='bold'>Free Cash flow</td>
-            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter ${greenOrRed(data[d] && data[d].freeCashFlow, 0, -999999999999999)}`}>{data[d] && data[d].freeCashFlow && parseFloat(data[d].freeCashFlow).toFixed(2)}</td>)}
+            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov ${greenOrRed(data[d] && data[d].freeCashFlow, 0, 0)}`}>{data[d] && data[d].freeCashFlow && parseFloat(data[d].freeCashFlow).toFixed(2)}</td>)}
           </tr>
         </tbody>
       </table>
