@@ -102,7 +102,7 @@ export class CashflowTable extends React.Component {
         <div className={`theme-darkred-${theme} mb-2`} style={{ fontWeight: 'bold' }}>{profile.ticker} - {profile.name}&nbsp;<span className={`theme-green-${theme}`}>Cashflow Statement</span></div>
         <table className='table table-sm' style={{ marginBottom: 0, fontSize: 10 }}>
           <thead className='bold'>
-            <th className='left lighter'>Unit: ({unit})</th>
+            <th className='left'>Unit: ({unit})</th>
             {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d}`}>{arr[d] && arr[d].quarterStr}</td>)}
           </thead>
           <tbody>
@@ -112,15 +112,15 @@ export class CashflowTable extends React.Component {
             </tr>
             <tr>
               <td className='bold'>Financing Cashflows</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{arr[d] && arr[d].cashFlowFinancing && parseFloat(arr[d].cashFlowFinancing).toFixed(2)}</td>)}
+              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].cashFlowFinancing && parseFloat(arr[d].cashFlowFinancing).toFixed(2)}</td>)}
             </tr>
             <tr>
               <td className='bold'>Investing Cashflows</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{arr[d] && arr[d].totalInvestingCashFlows && parseFloat(arr[d].totalInvestingCashFlows).toFixed(2)}</td>)}
+              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].totalInvestingCashFlows && parseFloat(arr[d].totalInvestingCashFlows).toFixed(2)}</td>)}
             </tr>
             <tr>
               <td className='bold'>Total Capital Expenditures</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{arr[d] && arr[d].capitalExpenditures && parseFloat(arr[d].capitalExpenditures).toFixed(2)}</td>)}
+              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].capitalExpenditures && parseFloat(arr[d].capitalExpenditures).toFixed(2)}</td>)}
             </tr>
             <tr>
               <td className='bold'>Changes In Cash</td>

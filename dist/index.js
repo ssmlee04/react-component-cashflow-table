@@ -187,7 +187,7 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react["default"].createElement("thead", {
         className: "bold"
       }, /*#__PURE__*/_react["default"].createElement("th", {
-        className: "left lighter"
+        className: "left"
       }, "Unit: (", unit, ")"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
@@ -205,21 +205,21 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
       }, "Financing Cashflows"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, arr[d] && arr[d].cashFlowFinancing && parseFloat(arr[d].cashFlowFinancing).toFixed(2));
       })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Investing Cashflows"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, arr[d] && arr[d].totalInvestingCashFlows && parseFloat(arr[d].totalInvestingCashFlows).toFixed(2));
       })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Total Capital Expenditures"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, arr[d] && arr[d].capitalExpenditures && parseFloat(arr[d].capitalExpenditures).toFixed(2));
       })), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
