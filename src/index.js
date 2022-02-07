@@ -102,8 +102,10 @@ export class CashflowTable extends React.Component {
         <div className={`theme-darkred-${theme} mb-2`} style={{ fontWeight: 'bold' }}>{profile.ticker} - {profile.name}&nbsp;<span className={`theme-green-${theme}`}>Cashflow Statement</span></div>
         <table className='table table-sm' style={{ marginBottom: 0, fontSize: 10 }}>
           <thead className='bold'>
-            <th className='left'>Unit: ({unit})</th>
-            {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d}`}>{arr[d] && arr[d].quarterStr}</td>)}
+            <tr>
+              <th className='left'>Unit: ({unit})</th>
+              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d}`}>{arr[d] && arr[d].quarterStr}</td>)}
+            </tr>
           </thead>
           <tbody>
             <tr>

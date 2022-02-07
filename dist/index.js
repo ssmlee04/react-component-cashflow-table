@@ -186,14 +186,14 @@ var CashflowTable = /*#__PURE__*/function (_React$Component) {
         }
       }, /*#__PURE__*/_react["default"].createElement("thead", {
         className: "bold"
-      }, /*#__PURE__*/_react["default"].createElement("th", {
+      }, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("th", {
         className: "left"
       }, "Unit: (", unit, ")"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d)
         }, arr[d] && arr[d].quarterStr);
-      })), /*#__PURE__*/_react["default"].createElement("tbody", null, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
+      }))), /*#__PURE__*/_react["default"].createElement("tbody", null, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement("td", {
         className: "bold"
       }, "Operating Cashflows"), _lodash["default"].range(count).map(function (d) {
         return /*#__PURE__*/_react["default"].createElement("td", {
